@@ -6,19 +6,13 @@ using System.Threading.Tasks;
 
 namespace sandbox_csharp_step0
 {
-    class Animal
+    abstract class Animal
     {
-        private string specie;
 
-        public string GetSpecie()
-        {
-            return specie;
-        }
-
-        public void SetSpecie(string value)
-        {
-            specie = value;
-        }
+        int age; // par défaut la visibilité est private
+        public int Age { get; set; }
+        abstract public string sexe();
+        abstract public string toString();
 
     }
 }
