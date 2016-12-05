@@ -9,7 +9,7 @@ namespace sandbox_csharp_step1
     class Ciseaux : Choix
     {
 
-        public override void initialize()
+        public Ciseaux()
         {
             this.Nom = CISEAUX;
             this.GagneContre = FEUILLE;

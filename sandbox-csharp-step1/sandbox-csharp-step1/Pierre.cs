@@ -8,7 +8,7 @@ namespace sandbox_csharp_step1
 {
     class Pierre : Choix {
 
-        public override void initialize() {
+        public Pierre() {
             this.Nom = PIERRE;
             this.GagneContre = CISEAUX;
             this.PerdContre = FEUILLE;

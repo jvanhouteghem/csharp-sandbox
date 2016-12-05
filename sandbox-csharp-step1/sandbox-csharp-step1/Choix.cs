@@ -37,7 +37,7 @@ namespace sandbox_csharp_step1
         public string PerdContre { get; set; }
 
         // Définition du choix (nom, gagneContre, perdContre)
-        public abstract void initialize();
+        //public abstract void Choix();
 
         public bool comparer() {
             return true;
@@ -46,15 +46,15 @@ namespace sandbox_csharp_step1
         /**
          * @Input(coupJoue) : le coup du joueur 1
          * @Input (coupAdversaire) : le coup de l'advsersaire
-         * @Output : 0 perdu, 1 égalité, 2 gagné
+         * @Output : 2 perdu, 0 égalité, 1 gagné
          */
         public int comparer(string coupJoue, string coupAdversaire) {
-            int result = 0;
+            int result = 2;
             if (coupJoue == coupAdversaire) {
-                result = 1;
+                result = 0;
             }
             else if (GagneContre == coupAdversaire) {
-                result = 2;
+                result = 1;
             } 
             return result;
         }

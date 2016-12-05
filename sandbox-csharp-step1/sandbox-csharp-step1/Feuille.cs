@@ -8,12 +8,13 @@ namespace sandbox_csharp_step1 {
 
     class Feuille : Choix {
 
-        public override void initialize()
+        public Feuille()
         {
             this.Nom = FEUILLE;
             this.GagneContre = PIERRE;
             this.PerdContre = CISEAUX;
         }
+
 
     }
 }
