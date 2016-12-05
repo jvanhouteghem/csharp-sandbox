@@ -21,6 +21,11 @@ namespace sandbox_csharp_step1
             listChoix.Add(feuille);
             listChoix.Add(ciseaux);
 
+            // Count
+            int equalCount = 0;
+            int victoryCount = 0;
+            int looseCount = 0;
+
             Random random = new Random();
 
             int nbPartie = 10;
@@ -33,11 +38,33 @@ namespace sandbox_csharp_step1
                 int randomPlayer2 = random.Next(0, 2);
                 String coupPlayer2 = ((Choix)listChoix[randomPlayer2]).Nom;
 
-                //Console.WriteLine(randomPlayer1 + " " + randomPlayer2);
+                int resultat = ((Choix)listChoix[randomPlayer1]).comparer(coupPlayer1, coupPlayer2);
 
-                Console.WriteLine(coupPlayer1 + " " + coupPlayer2 + " " + ((Choix)listChoix[randomPlayer1]).comparer(coupPlayer1, coupPlayer2));
+                Console.WriteLine(coupPlayer1 + " " + coupPlayer2 + " " + resultat );
+
+                // Update count
+                if (resultat == 0) {
+                    equalCount++;
+                } else if (resultat == 1) {
+                    victoryCount++;
+                } else {
+                    looseCount++;
+                }
 
             }
+
+            Console.WriteLine("----------------");
+            Console.WriteLine("Score final : \nJoueur 1 : " + victoryCount + " \nJoueur 2 : " + looseCount);
+
+            String nomGagnant;
+            if (victoryCount > looseCount) {
+                nomGagnant = "Joueur 1";
+            } else {
+                nomGagnant = "Joueur 2";
+            }
+
+            Console.WriteLine("----------------");
+            Console.WriteLine(nomGagnant + " gagne !");
 
             Console.ReadKey();
 

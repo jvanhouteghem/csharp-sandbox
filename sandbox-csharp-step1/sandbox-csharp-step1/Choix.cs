@@ -46,7 +46,7 @@ namespace sandbox_csharp_step1
         /**
          * @Input(coupJoue) : le coup du joueur 1
          * @Input (coupAdversaire) : le coup de l'advsersaire
-         * @Output : 2 perdu, 0 égalité, 1 gagné
+         * @Output : 0 égalité, 1 gagné, 2 perdu
          */
         public int comparer(string coupJoue, string coupAdversaire) {
             int result = 2;
