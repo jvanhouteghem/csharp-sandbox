@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Create string</Title>
+      <Shortcut>helloString</Shortcut>
+      <Description>Create hello string</Description>
+      <Author>LDR</Author>
+      <SnippetTypes>
+        <!-- snippet types -->
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>stringName</ID>
+          <ToolTip>Choose a string name</ToolTip>
+          <Default>stringName</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[string $stringName$ = "Hello World !";]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
