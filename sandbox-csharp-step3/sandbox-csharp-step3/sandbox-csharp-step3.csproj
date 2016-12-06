@@ -48,16 +48,25 @@
   <ItemGroup>
     <Compile Include="classes\Question.cs" />
     <Compile Include="classes\TestPersonnalite.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="forms\acceuilForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="forms\acceuilForm.Designer.cs">
+      <DependentUpon>acceuilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\questionnaireForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\questionnaireForm.Designer.cs">
+      <DependentUpon>questionnaireForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="forms\acceuilForm.resx">
+      <DependentUpon>acceuilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\questionnaireForm.resx">
+      <DependentUpon>questionnaireForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,9 +90,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="forms\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fichiers\reponse.txt" />
     <Content Include="fichiers\question.txt" />

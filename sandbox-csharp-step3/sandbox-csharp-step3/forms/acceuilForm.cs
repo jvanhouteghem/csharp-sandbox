@@ -1,4 +1,5 @@
-﻿using System;
+﻿using sandbox_csharp_step3.forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,8 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace sandbox_csharp_step3 {
-    public partial class Form1 : Form {
-        public Form1() {
+    public partial class acceuilForm : Form {
+        public acceuilForm() {
             InitializeComponent();
         }
 
@@ -19,6 +20,9 @@ namespace sandbox_csharp_step3 {
         }
 
         private void button1_Click(object sender, EventArgs e) {
+            // new questionnaire.Show()
+            //Application.Run(new questionnaireForm());
+            new questionnaireForm().Show();
         }
 
         private void button2_Click(object sender, EventArgs e) {

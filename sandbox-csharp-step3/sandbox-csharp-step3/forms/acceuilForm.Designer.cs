@@ -1,5 +1,5 @@
 ﻿namespace sandbox_csharp_step3 {
-    partial class Form1 {
+    partial class acceuilForm {
         /// <summary>
         /// Variable nécessaire au concepteur.
         /// </summary>

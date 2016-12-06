@@ -10,15 +10,17 @@ namespace sandbox_csharp_step3.classes {
     class TestPersonnalite {
 
         public int indexQuestion = 0;
-        const int tailleTableauReponse = 9;
+        const int tailleTableauReponse = 5;
         const string nomFichierQuestion = "question.txt";
         const string nomFichierReponse = "reponse.txt";
 
-        private int[] tableauReponse; // Liste des réponses par catégorie  {nbréponsecat1, nbréponsecat2 ...}
+        public String[] listeLines = new String[tailleTableauReponse];
+
+        public int[] tableauReponse; // Liste des réponses par catégorie  {nbréponsecat1, nbréponsecat2 ...}
         private string repertoireProjet;
         public Question questioncourante;
-        private StreamReader lectureFichier;
-        private StreamWriter ecritureFichier;
+        public StreamReader lectureFichier;
+        public StreamWriter ecritureFichier;
 
         // no-args constructor
         public TestPersonnalite() {
@@ -36,6 +38,14 @@ namespace sandbox_csharp_step3.classes {
             System.IO.StreamReader lectureFichier; // déclaration
             //Console.WriteLine(repertoireProjet + nomFichierQuestion);
             lectureFichier = new System.IO.StreamReader(repertoireProjet + "/fichiers/" + nomFichierQuestion); // instanciation
+
+            int i = 0;
+            while (!lectureFichier.EndOfStream) {
+                String ligne = lectureFichier.ReadLine(); // lecture de la ligne courante
+                listeLines[i] = ligne;
+                i++;
+            }
+            
             //String ligne = lectureFichier.ReadLine(); // lecture de la ligne courante
             //lectureFichier.Close(); // fermeture du fichier
             //lectureFichier.Dispose(); // libération de la mémoire
@@ -51,7 +61,10 @@ namespace sandbox_csharp_step3.classes {
         décomposée, traduite et injectée dans un nouvel objet « Question ». 
         Cette question est ensuite assignée à l'attribut « questionCourante ». Cette méthode retourne la « questionCourante »*/
         public Question questionSuivante() {
-            Question tmpQuestionCourante = new classes.Question(indexQuestion, "qa" + indexQuestion);
+
+            // Récupération de la question en fonction de l'index
+
+            Question tmpQuestionCourante = new classes.Question(indexQuestion, listeLines[indexQuestion]);
             questioncourante = tmpQuestionCourante;
             indexQuestion++;
             return tmpQuestionCourante;
@@ -103,5 +116,22 @@ namespace sandbox_csharp_step3.classes {
             ecritureFichier.Close(); // fermeture du fichier
         }
 
+        /*
+        Cette méthode est appelée après chaque action de l'utilisateur sur un bouton. Elle permet de gérer la
+        fin du questionnaire et le chargement d'une nouvelle question.
+        Si la question suivante est nulle, la méthode affiche une boite de dialogue avec les résultats, enregistre
+        les résultats dans un fichier et ferme la fenêtre. Sinon, elle met à jour la question dans l'interface.*/
+        public bool questionnaireTermine() {
+            bool result = false;
+            if (indexQuestion == listeLines.Length) {
+                result = true;
+            }
+            return result;
+        }
+
     }
 }
+
+
+// split
+        

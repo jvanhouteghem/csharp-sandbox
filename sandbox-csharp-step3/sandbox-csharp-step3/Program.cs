@@ -1,4 +1,5 @@
 ﻿using sandbox_csharp_step3.classes;
+using sandbox_csharp_step3.forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,11 +15,10 @@ namespace sandbox_csharp_step3 {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new acceuilForm());
+            //Application.Run(new questionnaireForm());
 
-            //TestPersonnalite tp = new TestPersonnalite();
-
-            TestPersonnalite t = new TestPersonnalite();
+            /*TestPersonnalite t = new TestPersonnalite();
 
             Question q = t.questionSuivante();
 
@@ -37,7 +37,8 @@ namespace sandbox_csharp_step3 {
             q.reponse = true;
             t.ajouterReponse(q);
 
-            t.enregistrerResultat();
+            t.enregistrerResultat();*/
+
         }
     }
 }
