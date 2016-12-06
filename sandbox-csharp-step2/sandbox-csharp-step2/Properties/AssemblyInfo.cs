@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Les informations générales relatives à un assembly dépendent de 
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("step1")]
+[assembly: AssemblyTitle("sandbox-csharp-step2")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("step1")]
+[assembly: AssemblyProduct("sandbox-csharp-step2")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
-[assembly: Guid("43ca4b04-04d3-4e67-b373-2ebe0b4f24c8")]
+[assembly: Guid("93d16ca7-6ace-4d70-be4b-729b786644fd")]
 
 // Les informations de version pour un assembly se composent des quatre valeurs suivantes :
 //
