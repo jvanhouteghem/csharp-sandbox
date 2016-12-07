@@ -43,28 +43,30 @@ namespace sandbox_csharp_step4 {
             // xPanel, le centre du grand cercle
             float xPanel = panelWidth/6;
             float yPanel = panelHeight/6;
-            float widthEllipse = 200.0F; // 355; 314
-            float heightEllipse = 200.0F;
+            float widthEllipse = 200; // 355; 314
+            float heightEllipse = 200;
 
             float rayon = widthEllipse / 2;
 
-            float centerCerclePrincipalX = panelWidth / 2 - rayon;
+            float centerCerclePrincipalX = panelWidth / 2 - rayon; // panelWidth / 2 désigne le point en haut à gauche du carré contenant le cercle, pour avoir le centre on rajoute le rayon
             float centerCerclePrincipalY = panelHeight / 2 - rayon;
 
             // Draw ellipse to screen.
             g.DrawEllipse(blackPen, centerCerclePrincipalX, centerCerclePrincipalY, widthEllipse, heightEllipse);
 
-            for (int i = 1; i < 10; i++) {
+            int nbPoints = 9;
+
+            for (int i = 1; i < nbPoints+1; i++) {
 
                 double angle = Math.PI/2;
-                angle += Math.PI * 2 / 9 * i;
+                angle += Math.PI * 2 / nbPoints * i; // Rajouter un quart de cercle
 
                 float rayonPetitCercle = 15;
 
-                double positionXCercle = panelWidth/2 - Math.Cos(angle) * rayon - rayonPetitCercle/2;
-                double positionYCercle = panelHeight/2 - Math.Sin(angle) * rayon - rayonPetitCercle/2;              
+                double positionXPetitCercle = panelWidth/2 - Math.Cos(angle) * rayon - rayonPetitCercle/2;
+                double positionYPetitCercle = panelHeight/2 - Math.Sin(angle) * rayon - rayonPetitCercle/2;              
 
-                g.FillEllipse(myBrush[i-1], (float) positionXCercle, (float) positionYCercle, rayonPetitCercle, rayonPetitCercle);
+                g.FillEllipse(myBrush[i-1], (float)positionXPetitCercle, (float)positionYPetitCercle, rayonPetitCercle, rayonPetitCercle);
 
             }
         }
