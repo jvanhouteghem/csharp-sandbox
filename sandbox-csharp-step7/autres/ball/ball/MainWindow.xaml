@@ -1,0 +1,20 @@
+﻿<Window x:Class="ball.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ball"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="319" VerticalAlignment="Top" Width="517" Focusable="True" Background="Crimson">
+            <Ellipse Name="ball1" Canvas.Left="10" Canvas.Top="142" Width="10" Height="10" Fill="Blue"  />
+            <Ellipse Name="ball2" Canvas.Left="10" Canvas.Top="98" Width="20" Height="20" Fill="Red"  />
+            <Ellipse Name="ball3" Canvas.Left="10" Canvas.Top="41" Width="30" Height="30" Fill="Yellow"  />
+            <Ellipse x:Name="ball4" Canvas.Left="358" Canvas.Top="51" Width="30" Height="30" Fill="Yellow"  />
+            <Ellipse x:Name="ball5" Canvas.Left="33" Canvas.Top="156" Width="10" Height="10" Fill="Blue"  />
+            <Ellipse x:Name="ball6" Canvas.Left="54" Canvas.Top="142" Width="10" Height="10" Fill="Blue"  />
+        </Canvas>
+
+    </Grid>
+</Window>
